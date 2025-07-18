@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="hi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>सुविचार संग्रह</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>सुविचार संग्रह</h1>
+    <ul id="archiveList"></ul>
+  </div>
+  <script src="script.js"></script>
+  <script>
+    const archiveList = document.getElementById("archiveList");
+    quotes.forEach((q, i) => {
+      const li = document.createElement("li");
+      li.textContent = `${i + 1}. ${q.quote} — ${q.author}`;
+      li.style.marginBottom = "15px";
+      archiveList.appendChild(li);
+    });
+  </script>
+</body>
+</html>
